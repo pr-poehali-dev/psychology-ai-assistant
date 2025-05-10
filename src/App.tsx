@@ -11,6 +11,7 @@ import BreathingTechniques from "./pages/BreathingTechniques";
 import Visualization from "./pages/Visualization";
 import AIAssistant from "@/components/AIAssistant";
 import SelfAssessment from "./pages/SelfAssessment";
+import GroundingTechnique from "./pages/GroundingTechnique";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,10 @@ const App = () => (
             element={<BreathingTechniques />}
           />
           <Route path="/techniques/visualization" element={<Visualization />} />
+          <Route
+            path="/techniques/grounding-technique"
+            element={<GroundingTechnique />}
+          />
           <Route path="/assessment" element={<SelfAssessment />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

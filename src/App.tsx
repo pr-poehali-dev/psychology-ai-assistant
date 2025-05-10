@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ProgressiveRelaxation from "./pages/ProgressiveRelaxation";
 import MindfulnessMeditation from "./pages/MindfulnessMeditation";
+import BreathingTechniques from "./pages/BreathingTechniques";
 import AIAssistant from "./components/AIAssistant";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,10 @@ const App = () => (
           <Route
             path="/techniques/mindfulness-meditation"
             element={<MindfulnessMeditation />}
+          />
+          <Route
+            path="/techniques/breathing"
+            element={<BreathingTechniques />}
           />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

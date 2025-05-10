@@ -1,6 +1,7 @@
 import React from "react";
 import ExpressHelpCard from "./ExpressHelpCard";
 import { expressHelp } from "@/data/techniques";
+import { Link } from "react-router-dom";
 
 const ExpressHelpSection = () => {
   return (
@@ -33,17 +34,18 @@ const ExpressHelpSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {expressHelp.map((item, index) => (
-            <ExpressHelpCard
-              key={index}
-              title={item.title}
-              description={item.description}
-              content={item.content}
-              icon={item.icon}
-              action={item.action}
-              actionIcon={item.actionIcon}
-              bgColor={item.bgColor}
-              iconColor={item.iconColor}
-            />
+            <Link key={index} to={item.link || "#"} className="block">
+              <ExpressHelpCard
+                title={item.title}
+                description={item.description}
+                content={item.content}
+                icon={item.icon}
+                action={item.action}
+                actionIcon={item.actionIcon}
+                bgColor={item.bgColor}
+                iconColor={item.iconColor}
+              />
+            </Link>
           ))}
         </div>
       </div>

@@ -52,6 +52,7 @@ export const expressHelp = [
     actionIcon: "PlayCircle",
     bgColor: "bg-[#E5F9E0]",
     iconColor: "text-green-600",
+    link: "/techniques/breathing",
   },
   {
     title: "Техника 5-4-3-2-1",

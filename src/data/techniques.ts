@@ -75,6 +75,7 @@ export const expressHelp = [
     actionIcon: "Compass",
     bgColor: "bg-[#FDE1D3]",
     iconColor: "text-orange-500",
+    link: "/techniques/visualization",
   },
 ];
 

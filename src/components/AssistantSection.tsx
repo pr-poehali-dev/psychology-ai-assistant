@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import AssistantDialog from "./AssistantDialog";
+import ExpressHelpCard from "./ExpressHelpCard";
 import { assistantFeatures } from "@/data/techniques";
 
 const AssistantSection = () => {

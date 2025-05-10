@@ -13,14 +13,10 @@ import {
   availableTests,
   assessmentInfo,
   anxietyReductionTips,
-  spielbergerAnxietyTest,
-  beckAnxietyTest,
-  beckDepressionTest,
-  holmesRaheStressTest,
+  getTestById,
   DiagnosticTest,
-  TestQuestion as TestQuestionType,
   TestResult,
-} from "@/data/assessment-data";
+} from "@/data/assessment";
 
 const SelfAssessment: React.FC = () => {
   // Состояния для управления процессом тестирования
@@ -41,31 +37,15 @@ const SelfAssessment: React.FC = () => {
   // Получение выбранного теста
   const getSelectedTest = (): DiagnosticTest | null => {
     if (!selectedTestId) return null;
-
-    switch (selectedTestId) {
-      case "spielberger-anxiety":
-        return spielbergerAnxietyTest;
-      case "beck-anxiety":
-        return beckAnxietyTest;
-      case "beck-depression":
-        return beckDepressionTest;
-      case "holmes-rahe-stress":
-        return holmesRaheStressTest;
-      case "zung-depression":
-      case "boyko-burnout":
-      case "mmpi":
-      case "leonhard-test":
-      case "ghq-28":
-        // Для тестов, которые еще не полностью реализованы, можно показать сообщение
-        // что тест в разработке или предложить другие доступные тесты
-        alert(
-          "Этот тест находится в разработке. Пожалуйста, выберите другой тест.",
-        );
-        setSelectedTestId(null);
-        return null;
-      default:
-        return null;
+    const test = getTestById(selectedTestId);
+    if (!test) {
+      alert(
+        "Этот тест находится в разработке. Пожалуйста, выберите другой тест.",
+      );
+      setSelectedTestId(null);
+      return null;
     }
+    return test;
   };
 
   const selectedTest = getSelectedTest();

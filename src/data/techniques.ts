@@ -12,6 +12,7 @@ export const techniques = [
     description:
       "Практика осознанности, помогающая сосредоточиться на настоящем моменте без оценки происходящего.",
     icon: "Leaf",
+    link: "/techniques/mindfulness-meditation",
   },
   {
     title: "Журналирование",

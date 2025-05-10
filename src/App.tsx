@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ProgressiveRelaxation from "./pages/ProgressiveRelaxation";
+import MindfulnessMeditation from "./pages/MindfulnessMeditation";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,10 @@ const App = () => (
           <Route
             path="/techniques/progressive-relaxation"
             element={<ProgressiveRelaxation />}
+          />
+          <Route
+            path="/techniques/mindfulness-meditation"
+            element={<MindfulnessMeditation />}
           />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

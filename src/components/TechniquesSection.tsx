@@ -36,6 +36,7 @@ const TechniquesSection = () => {
               title={technique.title}
               description={technique.description}
               icon={technique.icon}
+              link={technique.link}
             />
           ))}
         </div>

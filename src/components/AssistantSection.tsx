@@ -42,6 +42,19 @@ const AssistantSection = () => {
               Начать диалог
               <Icon name="ArrowRight" className="ml-2" />
             </Button>
+
+            <a href="/techniques/visualization">
+              <ExpressHelpCard
+                title="Визуализация"
+                description="Мысленное путешествие"
+                content="Представьте спокойное место, где вы чувствуете себя в безопасности. Задействуйте все органы чувств."
+                icon="Star"
+                action="Начать визуализацию"
+                actionIcon="Compass"
+                bgColor="bg-[#FDE1D3]"
+                iconColor="text-orange-500"
+              />
+            </a>
           </div>
           <div className="lg:w-1/2 mt-10 lg:mt-0">
             <AssistantDialog />
